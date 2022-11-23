@@ -62,11 +62,15 @@ window.onload = () => {
         menuList2.textContent = `How to Order`;
         const menuList3 = elementMaker("li", ["menuList"], "menuList3_id");
         menuList3.textContent = `FAQ`;
+        const menuList4 = elementMaker("li", ["menuList"], "menuList4");
+        menuList4.textContent = `Offer`;
+        menuList_wrapper.appendChild(menuList4);
         menuList_wrapper.appendChild(menuList1);
         menuList_wrapper.appendChild(menuList2);
         menuList_wrapper.appendChild(menuList3);
 
         const body_container = document.querySelector(".body_container");
+        // delivary info popup
         const deliveryInfoWrapper = elementMaker("div", ["deliveryInfoWrapper"], "deliveryInfoWrapper_id");
         body_container.appendChild(deliveryInfoWrapper);
 
@@ -84,16 +88,9 @@ window.onload = () => {
 </svg>
 
         `;
-        const closeOrderVideoPopup = elementMaker("span", ["closeDeliveryPopup"], "closeDeliveryPopup_id");
-        closeOrderVideoPopup.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-  <path id="cross_2_" data-name="cross (2)" d="M11.939.995,10.883-.061,5.939,4.884.995-.061-.061.995,4.884,5.939-.061,10.883.995,11.939,5.939,6.994l4.944,4.945,1.056-1.056L6.994,5.939Z" transform="translate(0.061 0.061)" fill="#fff"/>
-</svg>
-
-        `;
         infoImg_container.appendChild(closeDeliveryPopup);
 
-
+        // video popup
         const orderVideoWrapper = elementMaker("div", ["deliveryInfoWrapper"], "orderVideoWrapper_id");
         body_container.appendChild(orderVideoWrapper);
         const orderVideoContainer = elementMaker("div", ["infoImg_container"], "orderVideoContainer_id");
@@ -101,15 +98,45 @@ window.onload = () => {
         <iframe class="iframe_style" height="340" src="https://www.youtube.com/embed/tgbNymZ7vqY">
         </iframe>
         `;
+        const closeOrderVideoPopup = elementMaker("span", ["closeDeliveryPopup"], "closeDeliveryPopup_id");
+        closeOrderVideoPopup.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+         <path id="cross_2_" data-name="cross (2)" d="M11.939.995,10.883-.061,5.939,4.884.995-.061-.061.995,4.884,5.939-.061,10.883.995,11.939,5.939,6.994l4.944,4.945,1.056-1.056L6.994,5.939Z" transform="translate(0.061 0.061)" fill="#fff"/>
+         </svg>
+
+        `;
         orderVideoContainer.appendChild(closeOrderVideoPopup);
+
+        // offer page popup
+        const offerImgWrapper = elementMaker("div", ["deliveryInfoWrapper"], "offerImgWrapper_id");
+        body_container.appendChild(offerImgWrapper);
+
+        const OfferImg_container = elementMaker("div", ["infoImg_container"], "OfferImg_container_id");
+        offerImgWrapper.appendChild(OfferImg_container);
+
+        const Offer_image = elementMaker("img", ["delivary_info_image"], "Offer_image_id");
+        Offer_image.setAttribute("src", `https://i.ibb.co/jhg84SQ/DELIVERY-CHARGE-CHART.jpg`);
+        OfferImg_container.appendChild(Offer_image);
+        const closeOfferImgPopup = elementMaker("span", ["closeDeliveryPopup"], "closeOfferImgPopup_id");
+        closeOfferImgPopup.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <path id="cross_2_" data-name="cross (2)" d="M11.939.995,10.883-.061,5.939,4.884.995-.061-.061.995,4.884,5.939-.061,10.883.995,11.939,5.939,6.994l4.944,4.945,1.056-1.056L6.994,5.939Z" transform="translate(0.061 0.061)" fill="#fff"/>
+</svg>
+
+        `;
+        OfferImg_container.appendChild(closeOfferImgPopup);
+
 
         // close popup
         closeDeliveryPopup.addEventListener("click", function () {
             document.getElementById("deliveryInfoWrapper_id").classList.remove("active_delivery_info");
         });
-        closeOrderVideoPopup.addEventListener("click" , function(){
+        closeOrderVideoPopup.addEventListener("click", function () {
             document.getElementById("orderVideoWrapper_id").classList.remove("active_delivery_info");
             orderVideoWrapper.removeChild(orderVideoContainer);
+        });
+        closeOfferImgPopup.addEventListener("click", function () {
+            document.getElementById("offerImgWrapper_id").classList.remove("active_delivery_info");
         });
 
         // menu button interaction
@@ -121,14 +148,18 @@ window.onload = () => {
             orderVideoWrapper.appendChild(orderVideoContainer);
         });
 
+        menuList4.addEventListener("click", function () {
+            document.getElementById("offerImgWrapper_id").classList.add("active_delivery_info");
+        });
+
         // remove faq menu
-        const cx_1630815321671_menu_wrapper  = document.querySelectorAll(".cx_1630815321671_main_nav_item ");
-        cx_1630815321671_menu_wrapper?.forEach(element=>{
-            if(element?.getAttribute("data-path") === "/page/faq"){
+        const cx_1630815321671_menu_wrapper = document.querySelectorAll(".cx_1630815321671_main_nav_item ");
+        cx_1630815321671_menu_wrapper?.forEach(element => {
+            if (element?.getAttribute("data-path") === "/page/faq") {
                 element.remove();
             };
         });
-        menuList3.addEventListener("click" , function(){
+        menuList3.addEventListener("click", function () {
             typeof handleNavigate == "function" && handleNavigate("/page/faq");
         });
 
