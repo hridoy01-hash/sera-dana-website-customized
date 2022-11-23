@@ -98,10 +98,9 @@ window.onload = () => {
         body_container.appendChild(orderVideoWrapper);
         const orderVideoContainer = elementMaker("div", ["infoImg_container"], "orderVideoContainer_id");
         orderVideoContainer.innerHTML = `
-        <iframe width="500" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        <iframe class="iframe_style" height="340" src="https://www.youtube.com/embed/tgbNymZ7vqY">
         </iframe>
         `;
-        orderVideoWrapper.appendChild(orderVideoContainer);
         orderVideoContainer.appendChild(closeOrderVideoPopup);
 
         // close popup
@@ -110,6 +109,7 @@ window.onload = () => {
         });
         closeOrderVideoPopup.addEventListener("click" , function(){
             document.getElementById("orderVideoWrapper_id").classList.remove("active_delivery_info");
+            orderVideoWrapper.removeChild(orderVideoContainer);
         });
 
         // menu button interaction
@@ -118,6 +118,7 @@ window.onload = () => {
         });
         menuList2.addEventListener("click", function () {
             document.getElementById("orderVideoWrapper_id").classList.add("active_delivery_info");
+            orderVideoWrapper.appendChild(orderVideoContainer);
         })
 
 
