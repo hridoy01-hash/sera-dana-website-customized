@@ -74,7 +74,7 @@ window.onload = () => {
         deliveryInfoWrapper.appendChild(infoImg_container);
 
         const delivary_info_image = elementMaker("img", ["delivary_info_image"], "delivary_info_image_id");
-        delivary_info_image.setAttribute("src", `https://i.ibb.co/BCTZRNf/ELUXUM-DELIVERY-POLICY.jpg`);
+        delivary_info_image.setAttribute("src", `https://i.ibb.co/jhg84SQ/DELIVERY-CHARGE-CHART.jpg`);
         infoImg_container.appendChild(delivary_info_image);
 
         const closeDeliveryPopup = elementMaker("span", ["closeDeliveryPopup"], "closeDeliveryPopup_id");
@@ -119,7 +119,19 @@ window.onload = () => {
         menuList2.addEventListener("click", function () {
             document.getElementById("orderVideoWrapper_id").classList.add("active_delivery_info");
             orderVideoWrapper.appendChild(orderVideoContainer);
-        })
+        });
+
+        // remove faq menu
+        const cx_1630815321671_menu_wrapper  = document.querySelectorAll(".cx_1630815321671_main_nav_item ");
+        cx_1630815321671_menu_wrapper?.forEach(element=>{
+            if(element?.getAttribute("data-path") === "/page/faq"){
+                element.remove();
+            };
+        });
+        menuList3.addEventListener("click" , function(){
+            typeof handleNavigate == "function" && handleNavigate("/page/faq");
+        });
+
 
 
 
