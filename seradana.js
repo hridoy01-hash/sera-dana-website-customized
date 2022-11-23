@@ -95,7 +95,7 @@ window.onload = () => {
         body_container.appendChild(orderVideoWrapper);
         const orderVideoContainer = elementMaker("div", ["infoImg_container"], "orderVideoContainer_id");
         orderVideoContainer.innerHTML = `
-        <iframe class="iframe_style" height="340" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        <iframe class="iframe_style" height="340" frameborder="0" src="https://www.youtube.com/embed/tgbNymZ7vqY">
         </iframe>
         `;
         const closeOrderVideoPopup = elementMaker("span", ["closeDeliveryPopup"], "closeDeliveryPopup_id");
@@ -120,8 +120,8 @@ window.onload = () => {
         const closeOfferImgPopup = elementMaker("span", ["closeDeliveryPopup"], "closeOfferImgPopup_id");
         closeOfferImgPopup.innerHTML = `
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-  <path id="cross_2_" data-name="cross (2)" d="M11.939.995,10.883-.061,5.939,4.884.995-.061-.061.995,4.884,5.939-.061,10.883.995,11.939,5.939,6.994l4.944,4.945,1.056-1.056L6.994,5.939Z" transform="translate(0.061 0.061)" fill="#fff"/>
-</svg>
+        <path id="cross_2_" data-name="cross (2)" d="M11.939.995,10.883-.061,5.939,4.884.995-.061-.061.995,4.884,5.939-.061,10.883.995,11.939,5.939,6.994l4.944,4.945,1.056-1.056L6.994,5.939Z" transform="translate(0.061 0.061)" fill="#fff"/>
+        </svg>
 
         `;
         OfferImg_container.appendChild(closeOfferImgPopup);
