@@ -163,21 +163,9 @@ window.onload = () => {
             typeof handleNavigate == "function" && handleNavigate("/page/faq");
         });
 
-        // add all products button in navbar
-        const cx_1630815321671_header_nav = document.querySelector(".cx_1630815321671_header_nav");
-        const allProductMneuWrapper = elementMaker("div", ["allProductMneuWrapper"]);
-
-        cx_1630815321671_header_nav.appendChild(allProductMneuWrapper);
-        const allProductMenu = elementMaker("span", ["allProductMenu"]);
-        allProductMenu.textContent = `All Products`;
-        allProductMneuWrapper.appendChild(allProductMenu);
-        allProductMneuWrapper.addEventListener("click", function () {
-            typeof handleNavigate == "function" && handleNavigate("/items");
-        });
-
         // add HOME button in navbar
-
-        const homeButtonWrapper = elementMaker("div", ["allProductMneuWrapper"]);
+        const cx_1630815321671_header_nav = document.querySelector(".cx_1630815321671_header_nav");
+        const homeButtonWrapper = elementMaker("div", ["allProductMneuWrapper"],"homeButton_id");
         cx_1630815321671_header_nav.appendChild(homeButtonWrapper);
         const homeButton = elementMaker("span", ["allProductMenu"]);
         homeButton.textContent = `Home`;
@@ -185,6 +173,18 @@ window.onload = () => {
         homeButtonWrapper.addEventListener("click", function () {
             typeof handleNavigate == "function" && handleNavigate("/");
         });
+
+        // add all products button in navbar
+        const allProductMneuWrapper = elementMaker("div", ["allProductMneuWrapper"]);
+        cx_1630815321671_header_nav.appendChild(allProductMneuWrapper);
+        const allProductMenu = elementMaker("span", ["allProductMenu"]);
+        allProductMenu.textContent = `Products`;
+        allProductMneuWrapper.appendChild(allProductMenu);
+        allProductMneuWrapper.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/items");
+        });
+
+        
 
 
 
