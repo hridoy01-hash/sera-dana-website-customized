@@ -3,7 +3,15 @@
 <head>
     <title>reCaptcha validation demo</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        @media (min-width: 1168px) {
+            .cx_1630815321671_main_nav .cx_1630815321671_main_nav_item {
+                margin-left: 17px !important;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
     <div class="form_container">
@@ -16,7 +24,9 @@
     </div>
 
     <div>
-        <iframe src="https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=false&app_id=1273061973207207&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2c8bee6d4857f%26domain%3Dhalalfoodservicebd.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fhalalfoodservicebd.com%252Ff2f36d67f936a58%26relation%3Dparent.parent&container_width=275&height=500&hide_cover=false&hide_cta=false&href=https%3A%2F%2Fwww.facebook.com%2FHalal.Food.Service.BD%2F&locale=en_US&sdk=joey&show_facepile=true&show_posts=false&small_header=false&tabs=&width=300" frameborder="0"></iframe>
+        <iframe
+            src="https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=false&app_id=1273061973207207&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2c8bee6d4857f%26domain%3Dhalalfoodservicebd.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fhalalfoodservicebd.com%252Ff2f36d67f936a58%26relation%3Dparent.parent&container_width=275&height=500&hide_cover=false&hide_cta=false&href=https%3A%2F%2Fwww.facebook.com%2FHalal.Food.Service.BD%2F&locale=en_US&sdk=joey&show_facepile=true&show_posts=false&small_header=false&tabs=&width=300"
+            frameborder="0"></iframe>
     </div>
     <script>
         document.getElementById("my_captcha_form").addEventListener("submit", function (evt) {
@@ -27,13 +37,14 @@
                 alert("please verify you are humann!");
                 evt.preventDefault();
                 return false;
-            }else{
+            } else {
                 // varified successfull
                 alert("Varified Successfull");
             }
-            
+
 
         });
+
     </script>
 </body>
 

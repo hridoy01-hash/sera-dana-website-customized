@@ -115,7 +115,7 @@ window.onload = () => {
         offerImgWrapper.appendChild(OfferImg_container);
 
         const Offer_image = elementMaker("img", ["delivary_info_image"], "Offer_image_id");
-        Offer_image.setAttribute("src", `https://i.ibb.co/jhg84SQ/DELIVERY-CHARGE-CHART.jpg`);
+        Offer_image.setAttribute("src", `https://i.ibb.co/BPc62J2/POST-11-19.jpg`);
         OfferImg_container.appendChild(Offer_image);
         const closeOfferImgPopup = elementMaker("span", ["closeDeliveryPopup"], "closeOfferImgPopup_id");
         closeOfferImgPopup.innerHTML = `
@@ -163,7 +163,28 @@ window.onload = () => {
             typeof handleNavigate == "function" && handleNavigate("/page/faq");
         });
 
+        // add all products button in navbar
+        const cx_1630815321671_header_nav = document.querySelector(".cx_1630815321671_header_nav");
+        const allProductMneuWrapper = elementMaker("div", ["allProductMneuWrapper"]);
 
+        cx_1630815321671_header_nav.appendChild(allProductMneuWrapper);
+        const allProductMenu = elementMaker("span", ["allProductMenu"]);
+        allProductMenu.textContent = `All Products`;
+        allProductMneuWrapper.appendChild(allProductMenu);
+        allProductMneuWrapper.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/items");
+        });
+
+        // add HOME button in navbar
+
+        const homeButtonWrapper = elementMaker("div", ["allProductMneuWrapper"]);
+        cx_1630815321671_header_nav.appendChild(homeButtonWrapper);
+        const homeButton = elementMaker("span", ["allProductMenu"]);
+        homeButton.textContent = `Home`;
+        homeButtonWrapper.appendChild(homeButton);
+        homeButtonWrapper.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/");
+        });
 
 
 
