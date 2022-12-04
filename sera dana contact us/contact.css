@@ -1,0 +1,368 @@
+.universal * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f7f9;
+}
+
+.box_container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+figure {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.about_us_banner_main_wrapper {
+    position: relative;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+}
+
+.display_img {
+    display: block;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.icon {
+    display: flex;
+    margin-top: 7px;
+}
+
+.display_banner_text_content_wrapper {
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
+
+.page_baner_main_wrapper {
+    padding: 100px 0 60px;
+    background-image: url('https://thewebmax.com/jobzilla/images/banner/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.baner_text_content_title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.baner_text_content_title_wrapper {
+    padding-bottom: 20px;
+}
+
+.page_title {
+    font-size: 28px;
+    color: #17171d;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.about_us_title_text_wrapper {
+    padding-bottom: 20px;
+}
+
+.baner_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.display_img {
+    display: block;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.contact_title_text_wrapper {
+    padding-bottom: 15px;
+}
+
+.contact_title {
+    color: #212121;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.contact_list_wrapper {
+    padding-bottom: 25px;
+}
+
+.contactList_item {
+    font-size: 15px;
+    color: #70778b;
+    display: block;
+    font-weight: 500;
+}
+
+.contact_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.phone_number_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone_box_title {
+    font-size: 15px;
+    color: #70778b;
+    font-weight: 400;
+}
+
+.phone_number {
+    color: #212121;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.phone_icon_img {
+    display: flex;
+}
+
+.phone_box_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.phone_box_wrapper {
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: 22px;
+}
+
+.social_icon_list_wrapper {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.social_icon_list_item {
+    width: 40px;
+    height: 40px;
+    background-color: #dfefeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.social_icon_img {
+    display: flex;
+    transform: scale(1);
+    transition: all 0.3s linear;
+}
+
+.social_icon_list_item:hover .social_icon_img {
+    transform: scale(1.1);
+}
+
+.share_title {
+    font-size: 15px;
+    color: #70778b;
+    font-weight: 400;
+}
+
+.social_addres_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.google_map_container {
+    width: 100%;
+    height: 330px;
+}
+
+.get_touch_innner_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.contact_us_inner_section {
+    padding: 50px 0px;
+    margin-bottom: 30px;
+}
+
+.google_map_box {
+    padding-top: 50px;
+}
+
+.text_content_inner_content {
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgb(56 152 226 / 30%);
+    padding: 40px;
+    background-color: #fff;
+}
+
+.icon_box_content {
+    width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    background-color: #dbe6f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.address_title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #17171d;
+}
+
+.address_sub_text {
+    font-size: 13px;
+    font-weight: 400;
+    color: #17171d;
+}
+
+.single_address_box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.all_address_wrapper_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icon_img {
+    height: 30px !important;
+    width: auto !important;
+}
+
+.text_content_box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.google_map_container iframe {
+    height: 340px !important;
+    width: 100%;
+}
+.se-component figure{
+    padding-bottom: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:640px) {
+    .contact_us_inner_section {
+        padding: 60px 0px;
+        margin-bottom: 30px;
+    }
+
+    .all_address_wrapper_box {
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width:995px) {
+    .get_touch_innner_content_wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .text_content_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact_us_inner_section {
+        padding: 80px 0px;
+        margin-bottom: 40px;
+    }
+
+    .google_map_box {
+        padding-top: 80px;
+    }
+
+    .social_addres_box {
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+}
+
+@media screen and (min-width:1025px) {
+    .google_map_container {
+        height: 520px;
+    }
+
+    .get_touch_innner_content_wrapper {
+        gap: 70px;
+    }
+
+    .contact_us_inner_section {
+        padding: 100px 0px;
+        margin-bottom: 40px;
+    }
+
+    .text_content_inner_content {
+        padding: 60px;
+    }
+
+    .google_map_container iframe {
+        height: 540px !important;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:1368px) {
+    .all_address_wrapper_box {
+        gap: 50px;
+    }
+
+    .text_content_inner_content {
+        padding: 60px 100px;
+    }
+}

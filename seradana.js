@@ -244,6 +244,24 @@ window.onload = () => {
             };
         });
 
+        // contact us social page route
+        const facebook_route_id = document.getElementById("facebook_route_id");
+        const youtube_route_id = document.getElementById("youtube_route_id");
+        const instagram_route_id = document.getElementById("instagram_route_id");
+        const linkdin_route_id = document.getElementById("linkdin_route_id");
+        facebook_route_id.addEventListener("click" , function(){
+            typeof handleNavigate == "function" && window.open("https://www.facebook.com/seradanabd");
+        });
+        youtube_route_id.addEventListener("click" , function(){
+            typeof handleNavigate == "function" && window.open("https://www.youtube.com/channel/UCt4NRSuk93cKIRWML-14nSA");
+        });
+        instagram_route_id.addEventListener("click" , function(){
+            typeof handleNavigate == "function" && window.open("https://www.instagram.com/seradanabd/");
+        });
+        linkdin_route_id.addEventListener("click" , function(){
+            typeof handleNavigate == "function" && window.open("https://www.linkedin.com/company/sera-dana/");
+        });
+
 
 
         function elementMaker(name, className, id) {

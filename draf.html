@@ -9,41 +9,36 @@
                 margin-left: 17px !important;
             }
         }
+        .menu_wrapper{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            transition: all 0.2s linear;
+        }
+        .menu_item{
+            transition: all 0.3s linear;
+        }
+        .menu_item:hover{
+            color: red;
+        }
     </style>
 </head>
 
 
 <body>
     <div class="form_container">
-        <form action="#" id="my_captcha_form">
-            <div class="g-recaptcha" data-sitekey="6LfrFKQUAAAAAMzFobDZ7ZWy982lDxeps8cd1I2i"></div>
-            <p>
-                <button type="submit">Submit</button>
-            </p>
-        </form>
-    </div>
-
-    <div>
-        <iframe
-            src="https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=false&app_id=1273061973207207&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2c8bee6d4857f%26domain%3Dhalalfoodservicebd.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fhalalfoodservicebd.com%252Ff2f36d67f936a58%26relation%3Dparent.parent&container_width=275&height=500&hide_cover=false&hide_cta=false&href=https%3A%2F%2Fwww.facebook.com%2FHalal.Food.Service.BD%2F&locale=en_US&sdk=joey&show_facepile=true&show_posts=false&small_header=false&tabs=&width=300"
-            frameborder="0"></iframe>
+       
+        <ul class="menu_wrapper">
+           <li class="menu_item">Hello</li>
+           <li class="menu_item">Hello2</li>
+           <li class="menu_item">Hello3</li>
+           <li class="menu_item">Hello4</li>
+           <li class="menu_item">Hello5</li>
+        </ul>
+        
     </div>
     <script>
-        document.getElementById("my_captcha_form").addEventListener("submit", function (evt) {
-
-            var response = grecaptcha.getResponse();
-            if (response.length == 0) {
-                //reCaptcha not verified
-                alert("please verify you are humann!");
-                evt.preventDefault();
-                return false;
-            } else {
-                // varified successfull
-                alert("Varified Successfull");
-            }
-
-
-        });
+       
 
     </script>
 </body>

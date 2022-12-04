@@ -1,0 +1,268 @@
+.universal * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #F7F7F7;
+}
+
+.box_container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.breadcumb_section {
+    background-color: #0E915F;
+}
+
+.contact_us_title_wrapper {
+    padding: 22px 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_us_title {
+    font-size: 30px;
+    color: #F7F7F7;
+    font-weight: 500;
+}
+
+.get_touch_title_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #262626;
+    margin-bottom: 10px;
+}
+
+figure {
+    width: 100% !important;
+    height: 100% !important;
+    padding-bottom: 0px !important;
+}
+
+.display_img {
+    display: block;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.contact_title_text_wrapper {
+    padding-bottom: 15px;
+}
+
+.contact_title {
+    color: #212121;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.contact_list_wrapper {
+    padding-bottom: 25px;
+}
+
+.contactList_item {
+    font-size: 15px;
+    color: #70778b;
+    display: block;
+    font-weight: 500;
+}
+
+.contact_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phone_number_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone_box_title {
+    font-size: 15px;
+    color: #70778b;
+    font-weight: 400;
+}
+
+.phone_number {
+    color: #212121;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.opeing_hour {
+    color: #212121;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: -10px;
+}
+
+.phone_icon_img {
+    display: flex;
+}
+
+.youtube_img {
+    height: 21px;
+    display: flex;
+}
+
+.open_icon_img {
+    width: 60px;
+    display: block;
+    margin-left: -10px;
+}
+
+.phone_box_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.phone_box_wrapper {
+    border-bottom: 1px solid #e9dcdc;
+    padding-bottom: 22px;
+}
+
+.social_icon_list_wrapper {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.social_icon_list_item {
+    width: 40px;
+    height: 40px;
+    background-color: #dfefeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.social_icon_img {
+    display: flex;
+    transform: scale(1);
+    transition: all 0.3s linear;
+}
+
+.social_icon_list_item:hover .social_icon_img {
+    transform: scale(1.1);
+}
+
+.share_title {
+    font-size: 15px;
+    color: #70778b;
+    font-weight: 400;
+}
+
+.social_addres_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.google_map_container {
+    width: 100%;
+    height: 330px !important;
+}
+
+.get_touch_innner_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact_us_inner_section {
+    padding: 50px 0px;
+    margin-bottom: 30px;
+}
+
+.google_map_box {
+    padding-top: 50px;
+}
+
+.google_map_container iframe {
+    height: 340px !important;
+    width: 100%;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:640px) {
+    .contact_us_inner_section {
+        padding: 60px 0px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:957px) {
+    .get_touch_innner_content_wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        width: 100%;
+    }
+    .img_content_wrapper{
+        width: 50%;
+    }
+    .text_content_wrapper{
+        width: 50%;
+    }
+
+    .text_content_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact_us_inner_section {
+        padding: 80px 0px;
+        margin-bottom: 40px;
+    }
+
+    .google_map_box {
+        padding-top: 80px;
+    }
+
+    .social_addres_box {
+        gap: 15px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .google_map_container {
+        height: 520px !important;
+    }
+
+   .google_map_container iframe {
+        height: 540px !important;
+        width: 100%;
+    }
+
+    .get_touch_innner_content_wrapper {
+        gap: 70px;
+    }
+
+    .contact_us_inner_section {
+        padding: 60px 0px;
+        margin-bottom: 40px;
+    }
+}
