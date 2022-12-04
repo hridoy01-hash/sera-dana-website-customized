@@ -165,7 +165,7 @@ window.onload = () => {
 
         // add HOME button in navbar
         const cx_1630815321671_header_nav = document.querySelector(".cx_1630815321671_header_nav");
-        const homeButtonWrapper = elementMaker("div", ["allProductMneuWrapper"],"homeButton_id");
+        const homeButtonWrapper = elementMaker("div", ["allProductMneuWrapper"], "homeButton_id");
         cx_1630815321671_header_nav.appendChild(homeButtonWrapper);
         const homeButton = elementMaker("span", ["allProductMenu"]);
         homeButton.textContent = `Home`;
@@ -184,7 +184,7 @@ window.onload = () => {
             typeof handleNavigate == "function" && handleNavigate("/items");
         });
 
-        
+
 
 
 
@@ -245,22 +245,36 @@ window.onload = () => {
         });
 
         // contact us social page route
-        const facebook_route_id = document.getElementById("facebook_route_id");
-        const youtube_route_id = document.getElementById("youtube_route_id");
-        const instagram_route_id = document.getElementById("instagram_route_id");
-        const linkdin_route_id = document.getElementById("linkdin_route_id");
-        facebook_route_id.addEventListener("click" , function(){
-            typeof handleNavigate == "function" && window.open("https://www.facebook.com/seradanabd");
+
+        window.addEventListener("click", function () {
+            const contactPage = window.location.href;
+            let checkContactPage = contactPage.includes("/page/contact");
+            if (checkContactPage) {
+
+                setTimeout(() => {
+                    const facebook_route_id = document.getElementById("facebook_route_id");
+                    const youtube_route_id = document.getElementById("youtube_route_id");
+                    const instagram_route_id = document.getElementById("instagram_route_id");
+                    const linkdin_route_id = document.getElementById("linkdin_route_id");
+                    facebook_route_id.addEventListener("click", function () {
+                        typeof handleNavigate == "function" && window.open("https://www.facebook.com/seradanabd");
+                    });
+                    youtube_route_id.addEventListener("click", function () {
+                        typeof handleNavigate == "function" && window.open("https://www.youtube.com/channel/UCt4NRSuk93cKIRWML-14nSA");
+                    });
+                    instagram_route_id.addEventListener("click", function () {
+                        typeof handleNavigate == "function" && window.open("https://www.instagram.com/seradanabd/");
+                    });
+                    linkdin_route_id.addEventListener("click", function () {
+                        typeof handleNavigate == "function" && window.open("https://www.linkedin.com/company/sera-dana/");
+                    });
+                }, 900);
+
+
+            }
         });
-        youtube_route_id.addEventListener("click" , function(){
-            typeof handleNavigate == "function" && window.open("https://www.youtube.com/channel/UCt4NRSuk93cKIRWML-14nSA");
-        });
-        instagram_route_id.addEventListener("click" , function(){
-            typeof handleNavigate == "function" && window.open("https://www.instagram.com/seradanabd/");
-        });
-        linkdin_route_id.addEventListener("click" , function(){
-            typeof handleNavigate == "function" && window.open("https://www.linkedin.com/company/sera-dana/");
-        });
+
+
 
 
 
