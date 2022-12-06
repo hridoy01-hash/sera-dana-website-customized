@@ -240,18 +240,6 @@ window.onload = () => {
                     if (lengthGet == 0) {
                         s020C_all_sub_category_item_section_id.style.padding = `unset`;
                     }
-
-                    // view more button on catagory related product
-                    const s020D_harvest_all_items_area = document.querySelector(".s020D_harvest_all_items_area");
-                    const buttonWrapper = elementMaker("div" , ["button_wrapper"]);
-                    s020D_harvest_all_items_area.appendChild(buttonWrapper);
-                    const viewMore_button = elementMaker("button" , ["viewMore_button"],"viewMore_button_id");
-                    viewMore_button.textContent = `View More`;
-                    buttonWrapper.appendChild(viewMore_button);
-                    const viewMore_button_id = document.getElementById("viewMore_button");
-                    viewMore_button.addEventListener("click" , function(){
-                        typeof handleNavigate == "function" && handleNavigate("/items");
-                    })
                 }, 1300);
             };
         });
