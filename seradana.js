@@ -159,6 +159,7 @@ window.onload = () => {
                 element.remove();
             };
         });
+
         menuList3.addEventListener("click", function () {
             typeof handleNavigate == "function" && handleNavigate("/page/faq");
         });
@@ -182,6 +183,16 @@ window.onload = () => {
         allProductMneuWrapper.appendChild(allProductMenu);
         allProductMneuWrapper.addEventListener("click", function () {
             typeof handleNavigate == "function" && handleNavigate("/items");
+        });
+
+        // add blog button in navbar
+        const blogButton_wrapper = elementMaker("div", ["blog_button_wrapper"]);
+        cx_1630815321671_header_nav.appendChild(blogButton_wrapper);
+        const blogButton_id = elementMaker("span", ["blog_button"]);
+        blogButton_id.textContent = `Blog`;
+        blogButton_wrapper.appendChild(blogButton_id);
+        blogButton_wrapper.addEventListener("click", function () {
+            typeof handleNavigate == "function" && handleNavigate("/blogs");
         });
 
 
